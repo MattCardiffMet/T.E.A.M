@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://dtpp76gbtn3lx"]
+
+[ext_resource type="Script" uid="uid://c4vrldg8edobt" path="res://main menu/main_menu.gd" id="1_8f8xy"]
+[ext_resource type="Texture2D" uid="uid://csi18asgdsuwb" path="res://main menu/assets/gauntlet-logo.png" id="1_cok42"]
+
+[node name="MainMenu" type="Control" unique_id=1296982384]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8f8xy")
+metadata/_edit_use_anchors_ = true
+
+[node name="MiddleColour" type="ColorRect" parent="." unique_id=302205286]
+layout_mode = 0
+offset_left = -67.0
+offset_top = 234.0
+offset_right = 1234.0
+offset_bottom = 491.0
+color = Color(0, 0, 0, 1)
+
+[node name="BottomColour" type="ColorRect" parent="." unique_id=1027810568]
+layout_mode = 0
+offset_left = -63.0
+offset_top = -16.0
+offset_right = 1238.0
+offset_bottom = 241.0
+color = Color(0.007843138, 0.11764706, 0.6509804, 1)
+
+[node name="TopColour" type="ColorRect" parent="." unique_id=449881307]
+layout_mode = 0
+offset_left = -77.0
+offset_top = 457.0
+offset_right = 1224.0
+offset_bottom = 714.0
+color = Color(0.007843138, 0.11764706, 0.6509804, 1)
+
+[node name="StartLabel" type="Label" parent="." unique_id=831166604]
+layout_mode = 0
+offset_left = 541.0
+offset_top = 292.0
+offset_right = 589.0
+offset_bottom = 315.0
+text = "START"
+
+[node name="ExitLabel" type="Label" parent="." unique_id=1638632676]
+layout_mode = 0
+offset_left = 549.0
+offset_top = 339.0
+offset_right = 582.0
+offset_bottom = 362.0
+text = "EXIT"
+horizontal_alignment = 1
+
+[node name="ArrowExit" type="Label" parent="." unique_id=514737737]
+layout_mode = 0
+offset_left = 485.0
+offset_top = 340.0
+offset_right = 525.0
+offset_bottom = 363.0
+text = ">>"
+
+[node name="ArrowStart" type="Label" parent="." unique_id=1856947091]
+layout_mode = 0
+offset_left = 485.0
+offset_top = 295.0
+offset_right = 525.0
+offset_bottom = 318.0
+text = ">>"
+
+[node name="GauntletLogo" type="TextureRect" parent="." unique_id=187821382]
+layout_mode = 0
+offset_left = 258.0
+offset_top = 43.0
+offset_right = 890.0
+offset_bottom = 270.0
+texture = ExtResource("1_cok42")
+expand_mode = 1

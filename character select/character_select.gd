@@ -17,7 +17,9 @@ func _unhandled_input(event):
 		select = wrapi(select - 1,0,4)
 		update_arrows()
 	elif event.is_action_pressed("menu_accept"):
-		# TODO: choose_character()
+		choose_character()
+		print("chara chosen")
+		get_tree().change_scene_to_file("res://ingame/game.tscn")
 		print("select character ", select)
 	elif event.is_action_pressed("menu_quit"):
 		get_tree().change_scene_to_file("res://main menu/main_menu.tscn")
@@ -37,3 +39,17 @@ func update_arrows():
 			arrowMerlin.visible = true
 		3:
 			arrowQuestor.visible = true
+
+func choose_character():
+	match select:
+		0:
+			Global.chara = "Thor"
+		1:
+			Global.chara = "Thyra"
+		2:
+			Global.chara = "Merlin"
+		3:
+			Global.chara = "Questor"
+	
+
+	

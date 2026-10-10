@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://drvim2dee3p6k"]
+
+[ext_resource type="Script" uid="uid://cfwdc2encli5y" path="res://ingame/player.gd" id="1_7cgaw"]
+[ext_resource type="Texture2D" uid="uid://c7g16nq58jqa0" path="res://character select/assets/merlin.png" id="2_wmfl1"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_05a0k"]
+radius = 17.0
+height = 54.0
+
+[node name="Game" type="Node2D" unique_id=272129187]
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1643436378]
+position = Vector2(81, 60)
+motion_mode = 1
+script = ExtResource("1_7cgaw")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=1533360122]
+position = Vector2(0.99999976, -1)
+scale = Vector2(0.072, 0.108)
+texture = ExtResource("2_wmfl1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1544647290]
+position = Vector2(1, -2)
+shape = SubResource("CapsuleShape2D_05a0k")

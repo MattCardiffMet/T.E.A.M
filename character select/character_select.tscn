@@ -1,5 +1,11 @@
 [gd_scene format=3 uid="uid://cyisrnxav21a2"]
 
+[ext_resource type="Script" uid="uid://cqca771ofi8n7" path="res://character select/character_select.gd" id="1_macxw"]
+[ext_resource type="Texture2D" uid="uid://c7g16nq58jqa0" path="res://character select/assets/merlin.png" id="2_jltdu"]
+[ext_resource type="Texture2D" uid="uid://ir7da7vfr5m4" path="res://character select/assets/questor.png" id="3_4bra0"]
+[ext_resource type="Texture2D" uid="uid://8xvba55ole1v" path="res://character select/assets/thyra.png" id="4_vupjx"]
+[ext_resource type="Texture2D" uid="uid://c2xayeqisywj6" path="res://character select/assets/thor.png" id="5_bkmmd"]
+
 [node name="CharacterSelect" type="Control" unique_id=971793484]
 layout_mode = 3
 anchors_preset = 15
@@ -7,10 +13,118 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_macxw")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1272138820]
+[node name="Background" type="ColorRect" parent="." unique_id=1272138820]
 layout_mode = 0
-offset_left = 413.0
-offset_top = 163.0
-offset_right = 652.0
-offset_bottom = 285.0
+offset_left = -27.0
+offset_top = -29.0
+offset_right = 1182.0
+offset_bottom = 674.0
+color = Color(0, 0, 0, 1)
+
+[node name="CharacterAssets" type="Node" parent="." unique_id=478475452]
+
+[node name="MerlinTexture" type="TextureRect" parent="CharacterAssets" unique_id=1680174398]
+offset_left = 623.0
+offset_top = 108.0
+offset_right = 826.0
+offset_bottom = 307.0
+texture = ExtResource("2_jltdu")
+expand_mode = 1
+
+[node name="QuestorTexture" type="TextureRect" parent="CharacterAssets" unique_id=1596729953]
+offset_left = 898.0
+offset_top = 108.0
+offset_right = 1101.0
+offset_bottom = 307.0
+texture = ExtResource("3_4bra0")
+expand_mode = 1
+
+[node name="ThyraTexture" type="TextureRect" parent="CharacterAssets" unique_id=1403857920]
+offset_left = 344.0
+offset_top = 105.0
+offset_right = 547.0
+offset_bottom = 304.0
+texture = ExtResource("4_vupjx")
+expand_mode = 1
+
+[node name="ThorTexture" type="TextureRect" parent="CharacterAssets" unique_id=1413410826]
+offset_left = 71.0
+offset_top = 111.0
+offset_right = 274.0
+offset_bottom = 310.0
+texture = ExtResource("5_bkmmd")
+expand_mode = 1
+
+[node name="CharacterLabels" type="Node" parent="." unique_id=368672193]
+
+[node name="ThorLabel" type="Label" parent="CharacterLabels" unique_id=1426112818]
+offset_left = 119.0
+offset_top = 353.0
+offset_right = 219.0
+offset_bottom = 376.0
+theme_override_colors/font_color = Color(0.72920763, 0, 0.22309294, 1)
+text = "Warrior Thor"
+
+[node name="ThyraLabel" type="Label" parent="CharacterLabels" unique_id=1136299002]
+offset_left = 391.0
+offset_top = 355.0
+offset_right = 502.0
+offset_bottom = 378.0
+theme_override_colors/font_color = Color(0.10043866, 0.3377082, 1, 1)
+text = "Valkyrie Thyra"
+
+[node name="MerlinLabel" type="Label" parent="CharacterLabels" unique_id=1247242251]
+offset_left = 662.0
+offset_top = 350.0
+offset_right = 770.0
+offset_bottom = 373.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+text = "Wizard Merlin"
+
+[node name="QuestorLabel" type="Label" parent="CharacterLabels" unique_id=1009124872]
+offset_left = 961.0
+offset_top = 354.0
+offset_right = 1061.0
+offset_bottom = 377.0
+theme_override_colors/font_color = Color(5.583167e-06, 0.7504471, 0.26385286, 1)
+text = "Elf Questor"
+
+[node name="Arrows" type="Node" parent="." unique_id=1700058701]
+
+[node name="ArrowThor" type="Label" parent="Arrows" unique_id=1707883680]
+offset_left = 133.0
+offset_top = 498.0
+offset_right = 229.89502
+offset_bottom = 567.0
+rotation = -1.5707964
+theme_override_font_sizes/font_size = 50
+text = ">>"
+
+[node name="ArrowThyra" type="Label" parent="Arrows" unique_id=801197120]
+offset_left = 409.0
+offset_top = 502.0
+offset_right = 505.89502
+offset_bottom = 571.0
+rotation = -1.5707964
+theme_override_font_sizes/font_size = 50
+text = ">>"
+
+[node name="ArrowMerlin" type="Label" parent="Arrows" unique_id=2035048191]
+offset_left = 679.0
+offset_top = 505.0
+offset_right = 775.895
+offset_bottom = 574.0
+rotation = -1.5707964
+theme_override_font_sizes/font_size = 50
+text = ">>"
+
+[node name="ArrowQuestor" type="Label" parent="Arrows" unique_id=1526091496]
+offset_left = 964.0
+offset_top = 502.0
+offset_right = 1060.895
+offset_bottom = 571.0
+rotation = -1.5707964
+theme_override_font_sizes/font_size = 50
+text = ">>"

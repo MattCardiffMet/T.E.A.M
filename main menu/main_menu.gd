@@ -20,7 +20,6 @@ func _unhandled_input(event):
 	# button handling
 	elif event.is_action_pressed("menu_accept"):
 		if arrow_on_play:
-			# TODO: ADD CHARA SELECT SCENE
 			get_tree().change_scene_to_file("res://character select/character_select.tscn") 
 		else:
 			get_tree().quit()

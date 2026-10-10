@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cfwdc2encli5y" path="res://ingame/player.gd" id="1_7cgaw"]
 [ext_resource type="Texture2D" uid="uid://c7g16nq58jqa0" path="res://character select/assets/merlin.png" id="2_wmfl1"]
+[ext_resource type="Texture2D" uid="uid://csi18asgdsuwb" path="res://main menu/assets/gauntlet-logo.png" id="3_wmfl1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_05a0k"]
 radius = 17.0
@@ -14,11 +15,19 @@ position = Vector2(81, 60)
 motion_mode = 1
 script = ExtResource("1_7cgaw")
 
-[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=1533360122]
-position = Vector2(0.99999976, -1)
-scale = Vector2(0.072, 0.108)
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=703514120]
+position = Vector2(-1.9999979, 2.7499866)
+scale = Vector2(0.06800001, 0.10699993)
 texture = ExtResource("2_wmfl1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1544647290]
-position = Vector2(1, -2)
+position = Vector2(-2, 3)
 shape = SubResource("CapsuleShape2D_05a0k")
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1072392634]
+zoom = Vector2(1.5, 1.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=676722680]
+position = Vector2(662, 316.5)
+scale = Vector2(0.54323, 0.4830097)
+texture = ExtResource("3_wmfl1")

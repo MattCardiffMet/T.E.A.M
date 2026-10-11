@@ -7,6 +7,7 @@ var arrow_on_play = true
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	update_arrows()
+	Global.score = 0
 
 func _unhandled_input(event):
 	# menu arrow handling

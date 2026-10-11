@@ -6,6 +6,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_7ei8d"]
 
 [node name="Projectile" type="Area2D" unique_id=239612448]
+texture_filter = 1
 script = ExtResource("1_7ei8d")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1455737959]

@@ -20,10 +20,15 @@ func _ready() -> void:
 		"Questor":
 			speed = 300
 			health = 850
+		"Test":
+			speed = 500
+			health = 100
 
 func _physics_process(_delta: float) -> void:
 	var direction = Input.get_vector("game_left", "game_right", "game_up", "game_down")
 	
+	# if any of you decide to touch this please read this first 
+	# https://www.reddit.com/r/godot/comments/t206my/how_to_get_a_direction_from_a_vector2d/
 	if direction != Vector2.ZERO:
 		var angle = snappedf(direction.angle(), PI / 4)
 		direction = Vector2.from_angle(angle)
@@ -31,3 +36,10 @@ func _physics_process(_delta: float) -> void:
 	
 	velocity = direction * speed
 	move_and_slide()
+
+func take_damage(num):
+	health -= num
+	print("hp: ", health)
+	if health <= 0:
+		# TODO: make game over later (for now it just goes back to lobby)
+		get_tree().change_scene_to_file.call_deferred("res://main menu/main_menu.tscn")

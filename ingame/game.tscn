@@ -7,6 +7,8 @@
 [ext_resource type="Script" uid="uid://wi266jdrl8vg" path="res://ingame/hud.gd" id="5_kpj31"]
 [ext_resource type="PackedScene" uid="uid://y2mteu5gtnvk" path="res://ingame/spawner/spawner.tscn" id="6_s3i1m"]
 [ext_resource type="PackedScene" uid="uid://b6hdt5bg02gar" path="res://ingame/key/key.tscn" id="7_dkv5f"]
+[ext_resource type="PackedScene" uid="uid://u5pgiygqdmct" path="res://ingame/door/door.tscn" id="8_p2lj4"]
+[ext_resource type="PackedScene" uid="uid://cobl2i6eb3dxe" path="res://ingame/walls/wall.tscn" id="9_e6xlt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s3i1m"]
 size = Vector2(1355, 20)
@@ -112,4 +114,18 @@ horizontal_alignment = 1
 position = Vector2(150, -8)
 
 [node name="Key" parent="." unique_id=2070367725 instance=ExtResource("7_dkv5f")]
-position = Vector2(134, 85)
+position = Vector2(72, -73)
+
+[node name="Door" parent="." unique_id=1146499188 instance=ExtResource("8_p2lj4")]
+position = Vector2(288, 3)
+
+[node name="Wall" parent="." unique_id=1712423524 instance=ExtResource("9_e6xlt")]
+position = Vector2(295, -7)
+
+[node name="Wall2" parent="." unique_id=583808011 instance=ExtResource("9_e6xlt")]
+position = Vector2(374, 76)
+rotation = 3.1415927
+
+[node name="Wall3" parent="." unique_id=2068211231 instance=ExtResource("9_e6xlt")]
+position = Vector2(378, -5)
+rotation = 1.5707964

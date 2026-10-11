@@ -8,6 +8,8 @@ var arrow_on_play = true
 func _ready() -> void:
 	update_arrows()
 	Global.score = 0
+	Global.keys = 0
+	Global.chara = ""
 
 func _unhandled_input(event):
 	# menu arrow handling

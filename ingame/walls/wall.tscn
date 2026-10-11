@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cobl2i6eb3dxe"]
+
+[ext_resource type="Texture2D" uid="uid://ccl5pcre6tydn" path="res://ingame/walls/assets/wall.png" id="1_gf11d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e4ngj"]
+size = Vector2(86, 12)
+
+[node name="Wall" type="StaticBody2D" unique_id=1712423524]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1483557617]
+position = Vector2(39.5, 4)
+scale = Vector2(20.75, 5)
+texture = ExtResource("1_gf11d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1900398349]
+position = Vector2(40, 4)
+shape = SubResource("RectangleShape2D_e4ngj")

@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bbd33tw2tuu3d"]
+
+[ext_resource type="Script" uid="uid://dsvhl0ix5jmp7" path="res://ingame/score item/treasure.gd" id="1_e8mi3"]
+[ext_resource type="Texture2D" uid="uid://de85jsjfr24g8" path="res://ingame/score item/assets/treasure.png" id="2_hpdy7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_e8mi3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i0c6r"]
+size = Vector2(27, 27)
+
+[node name="Treasure" type="Area2D" unique_id=2057937811]
+script = ExtResource("1_e8mi3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=186368958]
+position = Vector2(1.25, 1.25)
+scale = Vector2(1.1, 1.1086956)
+texture = ExtResource("2_hpdy7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2089274702]
+shape = SubResource("CircleShape2D_e8mi3")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=82752843]
+
+[node name="Hitbox" type="CollisionShape2D" parent="Hitbox" unique_id=477127313]
+position = Vector2(2, 0)
+shape = SubResource("RectangleShape2D_i0c6r")
+debug_color = Color(0.9571883, 0, 0.5365223, 0.41960785)

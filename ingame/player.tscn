@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://bag8s0yx25hrm"]
+
+[ext_resource type="Script" uid="uid://cfwdc2encli5y" path="res://ingame/player.gd" id="1_th3q4"]
+[ext_resource type="Texture2D" uid="uid://bggc5uo7n2oi7" path="res://ingame/assets/Merlin.png" id="2_tg7bn"]
+[ext_resource type="Script" uid="uid://wi266jdrl8vg" path="res://ingame/hud.gd" id="3_d1wru"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_05a0k"]
+
+[node name="Player" type="CharacterBody2D" unique_id=1284846514]
+motion_mode = 1
+script = ExtResource("1_th3q4")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1584793328]
+texture_filter = 1
+position = Vector2(3.500004, -6.5570087)
+scale = Vector2(0.23, 0.3008957)
+texture = ExtResource("2_tg7bn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=362947281]
+position = Vector2(3, -7)
+shape = SubResource("CapsuleShape2D_05a0k")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=827965790]
+zoom = Vector2(2, 2)
+
+[node name="HUD" type="CanvasLayer" parent="Camera2D" unique_id=445068382]
+script = ExtResource("3_d1wru")
+
+[node name="Sidebar" type="ColorRect" parent="Camera2D/HUD" unique_id=979984341]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 903.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(5.264301e-08, 0, 0.095190175, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Camera2D/HUD" unique_id=1280044368]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 905.0
+offset_top = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="NameLabel" type="Label" parent="Camera2D/HUD/VBoxContainer" unique_id=1994410137]
+layout_mode = 2
+text = "CharaLabel"
+horizontal_alignment = 1
+
+[node name="HealthLabel" type="Label" parent="Camera2D/HUD/VBoxContainer" unique_id=1582691752]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.81354946, 0, 0.079885505, 1)
+text = "HealthLabel"
+horizontal_alignment = 1
+
+[node name="ScoreLabel" type="Label" parent="Camera2D/HUD/VBoxContainer" unique_id=822639835]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+text = "ScoreLabe;l"
+horizontal_alignment = 1
+
+[node name="KeysLabel" type="Label" parent="Camera2D/HUD/VBoxContainer" unique_id=133409646]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+text = "KeysLabel"
+horizontal_alignment = 1

@@ -25,7 +25,7 @@ func _unhandled_key_input(event) -> void:
 		update_arrows()
 	elif event.is_action_pressed("menu_accept"):
 		if on_story:
-			get_tree().change_scene_to_file("res://main menu/main_menu.tscn")
+			get_tree().change_scene_to_file("res://story/story.tscn")
 		elif not on_story:
 			get_tree().change_scene_to_file("res://ingame/game.tscn")
 

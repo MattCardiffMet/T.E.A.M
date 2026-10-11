@@ -8,6 +8,7 @@ var facing = Vector2.DOWN
 var projectile_load = preload("res://ingame/projectiles/projectile.tscn")
 
 func _ready() -> void:
+	add_to_group("player")
 	chara_sprite.texture = load("res://ingame/assets/" + Global.chara + ".png")
 	
 	match Global.chara:

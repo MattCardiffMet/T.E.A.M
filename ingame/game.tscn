@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://yqixa7x8q81c" path="res://ingame/enemy/enemy.tscn" id="4_05a0k"]
 [ext_resource type="Script" uid="uid://wi266jdrl8vg" path="res://ingame/hud.gd" id="5_kpj31"]
 [ext_resource type="PackedScene" uid="uid://y2mteu5gtnvk" path="res://ingame/spawner/spawner.tscn" id="6_s3i1m"]
+[ext_resource type="PackedScene" uid="uid://b6hdt5bg02gar" path="res://ingame/key/key.tscn" id="7_dkv5f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s3i1m"]
 size = Vector2(1355, 20)
@@ -99,7 +100,16 @@ theme_override_colors/font_color = Color(1, 1, 0, 1)
 text = "ScoreLabe;l"
 horizontal_alignment = 1
 
+[node name="KeysLabel" type="Label" parent="Player/Camera2D/HUD/VBoxContainer" unique_id=1267492710]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+text = "KeysLabel"
+horizontal_alignment = 1
+
 [node name="Enemy" parent="." unique_id=2097746384 instance=ExtResource("4_05a0k")]
 
 [node name="Spawner" parent="." unique_id=1219218771 instance=ExtResource("6_s3i1m")]
 position = Vector2(150, -8)
+
+[node name="Key" parent="." unique_id=2070367725 instance=ExtResource("7_dkv5f")]
+position = Vector2(134, 85)

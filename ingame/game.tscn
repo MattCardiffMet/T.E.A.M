@@ -110,12 +110,13 @@ text = "KeysLabel"
 horizontal_alignment = 1
 
 [node name="Enemy" parent="." unique_id=2097746384 instance=ExtResource("4_05a0k")]
+position = Vector2(323, 108)
 
 [node name="Spawner" parent="." unique_id=1219218771 instance=ExtResource("6_s3i1m")]
-position = Vector2(150, -8)
+position = Vector2(207, -69)
 
 [node name="Key" parent="." unique_id=2070367725 instance=ExtResource("7_dkv5f")]
-position = Vector2(72, -73)
+position = Vector2(429, 32)
 
 [node name="Door" parent="." unique_id=1146499188 instance=ExtResource("8_p2lj4")]
 position = Vector2(288, 3)

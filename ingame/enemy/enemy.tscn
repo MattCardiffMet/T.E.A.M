@@ -2,12 +2,16 @@
 
 [ext_resource type="Script" uid="uid://c4gg0ek0uspqa" path="res://ingame/enemy/enemy.gd" id="1_02fao"]
 [ext_resource type="Texture2D" uid="uid://cl7nqybdnj8gf" path="res://ingame/enemy/assets/ghost.png" id="2_ado2y"]
+[ext_resource type="Script" uid="uid://bwfcsuqv6obxr" path="res://ingame/enemy/hitbox.gd" id="3_ado2y"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5rps0"]
-radius = 12.0
-height = 32.0
+radius = 6.0
+height = 12.0
 
-[node name="Enemy" type="Area2D" unique_id=2097746384]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_02fao"]
+size = Vector2(20, 25)
+
+[node name="Enemy" type="CharacterBody2D" unique_id=1222579100]
 script = ExtResource("1_02fao")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1534877866]
@@ -18,3 +22,10 @@ texture = ExtResource("2_ado2y")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=717040563]
 position = Vector2(14, 20)
 shape = SubResource("CapsuleShape2D_5rps0")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=690621515]
+script = ExtResource("3_ado2y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=339995162]
+position = Vector2(14, 19)
+shape = SubResource("RectangleShape2D_02fao")

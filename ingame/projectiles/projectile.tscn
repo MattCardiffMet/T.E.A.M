@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://b46sasc0xijf5"]
+
+[ext_resource type="Script" uid="uid://budhxx4v3qlrp" path="res://ingame/projectiles/projectile.gd" id="1_7ei8d"]
+[ext_resource type="Texture2D" uid="uid://cl7nqybdnj8gf" path="res://ingame/enemy/assets/ghost.png" id="1_jfxb0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7ei8d"]
+
+[node name="Projectile" type="Area2D" unique_id=239612448]
+script = ExtResource("1_7ei8d")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1455737959]
+position = Vector2(-4, -3)
+scale = Vector2(0.71428573, 0.7692308)
+texture = ExtResource("1_jfxb0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1233162804]
+position = Vector2(-5, -2)
+shape = SubResource("CircleShape2D_7ei8d")

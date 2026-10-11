@@ -4,6 +4,9 @@ extends CharacterBody2D
 @export var health = 1000
 @onready var chara_sprite = $Sprite2D
 
+var facing = Vector2.DOWN
+var projectile_load = preload("res://ingame/projectiles/projectile.tscn")
+
 func _ready() -> void:
 	chara_sprite.texture = load("res://ingame/assets/" + Global.chara + ".png")
 	
@@ -33,9 +36,20 @@ func _physics_process(_delta: float) -> void:
 		var angle = snappedf(direction.angle(), PI / 4)
 		direction = Vector2.from_angle(angle)
 		chara_sprite.rotation = angle - PI / 2
+		facing = direction
+	
+	if Input.is_action_just_pressed("game_shoot"):
+		shoot()
 	
 	velocity = direction * speed
 	move_and_slide()
+
+func shoot():
+	var projectile = projectile_load.instantiate()
+	projectile.position = position
+	projectile.direction = facing
+	projectile.rotation = facing.angle()
+	get_parent().add_child(projectile)
 
 func take_damage(num):
 	health -= num

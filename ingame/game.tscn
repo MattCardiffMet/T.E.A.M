@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bggc5uo7n2oi7" path="res://ingame/assets/Merlin.png" id="2_wmfl1"]
 [ext_resource type="Texture2D" uid="uid://csi18asgdsuwb" path="res://main menu/assets/gauntlet-logo.png" id="3_wmfl1"]
 [ext_resource type="PackedScene" uid="uid://yqixa7x8q81c" path="res://ingame/enemy/enemy.tscn" id="4_05a0k"]
+[ext_resource type="Script" uid="uid://wi266jdrl8vg" path="res://ingame/hud.gd" id="5_kpj31"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_05a0k"]
 
@@ -27,8 +28,46 @@ shape = SubResource("CapsuleShape2D_05a0k")
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1072392634]
 zoom = Vector2(2, 2)
 
+[node name="HUD" type="CanvasLayer" parent="Player/Camera2D" unique_id=790942849]
+script = ExtResource("5_kpj31")
+
+[node name="Sidebar" type="ColorRect" parent="Player/Camera2D/HUD" unique_id=1478285019]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 903.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(5.264301e-08, 0, 0.095190175, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Player/Camera2D/HUD" unique_id=1646717158]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 905.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="NameLabel" type="Label" parent="Player/Camera2D/HUD/VBoxContainer" unique_id=878217484]
+layout_mode = 2
+text = "CharaLabel"
+horizontal_alignment = 1
+
+[node name="HealthLabel" type="Label" parent="Player/Camera2D/HUD/VBoxContainer" unique_id=1197248058]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.81354946, 0, 0.079885505, 1)
+text = "HealthLabel"
+horizontal_alignment = 1
+
+[node name="ScoreLabel" type="Label" parent="Player/Camera2D/HUD/VBoxContainer" unique_id=1944406837]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+text = "ScoreLabe;l"
+horizontal_alignment = 1
+
 [node name="temp logo" type="Sprite2D" parent="." unique_id=676722680]
-position = Vector2(662, 316.5)
+position = Vector2(492.00006, 188.5)
 scale = Vector2(0.54323, 0.4830097)
 texture = ExtResource("3_wmfl1")
 

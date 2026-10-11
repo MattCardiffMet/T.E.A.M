@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://yqixa7x8q81c"]
 
 [ext_resource type="Script" uid="uid://c4gg0ek0uspqa" path="res://ingame/enemy/enemy.gd" id="1_02fao"]
-[ext_resource type="Texture2D" uid="uid://cl7nqybdnj8gf" path="res://ingame/enemy/ghost.png" id="2_ado2y"]
+[ext_resource type="Texture2D" uid="uid://cl7nqybdnj8gf" path="res://ingame/enemy/assets/ghost.png" id="2_ado2y"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5rps0"]
 radius = 12.0

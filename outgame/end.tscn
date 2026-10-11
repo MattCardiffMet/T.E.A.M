@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://xnyp88u7x6kh"]
+
+[ext_resource type="Texture2D" uid="uid://c2xayeqisywj6" path="res://character select/assets/thor.png" id="1_7dmb6"]
+[ext_resource type="Script" uid="uid://shjciq8mryns" path="res://outgame/end.gd" id="1_d3ti5"]
+
+[node name="End" type="Control" unique_id=1606797378]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_d3ti5")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=133838556]
+layout_mode = 0
+offset_left = -24.0
+offset_top = -27.0
+offset_right = 1186.0
+offset_bottom = 672.0
+color = Color(0, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=210404502]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 97.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CharaLabel" type="Label" parent="VBoxContainer" unique_id=311862074]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.31321007, 0.5220671, 1, 1)
+text = "Character name label"
+horizontal_alignment = 1
+
+[node name="HighscoreLabel" type="Label" parent="VBoxContainer" unique_id=105640355]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+text = "highscore label"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="." unique_id=470181483]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 528.0
+offset_right = 718.0
+offset_bottom = 551.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = ">> Press ENTER to return to title <<"
+horizontal_alignment = 1
+
+[node name="CharaIcon" type="TextureRect" parent="." unique_id=1768086724]
+layout_mode = 0
+offset_left = 428.0
+offset_top = 178.0
+offset_right = 732.0
+offset_bottom = 488.0
+texture = ExtResource("1_7dmb6")
+expand_mode = 1

@@ -56,5 +56,4 @@ func take_damage(num):
 	health -= num
 	print("hp: ", health)
 	if health <= 0:
-		# TODO: make game over later (for now it just goes back to lobby)
-		get_tree().change_scene_to_file.call_deferred("res://main menu/main_menu.tscn")
+		get_tree().change_scene_to_file.call_deferred("res://outgame/end.tscn")

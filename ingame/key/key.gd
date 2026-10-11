@@ -13,4 +13,5 @@ func _process(_delta: float) -> void:
 func _on_body_entered(body):
 	if body.is_in_group("player"):
 		Global.keys += 1
+		Global.score += 100
 		queue_free()

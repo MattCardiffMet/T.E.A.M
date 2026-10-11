@@ -19,7 +19,7 @@ func spawn():
 	if get_tree().get_nodes_in_group("enemies").size() < 20:
 		var enemy = enemy_scene.instantiate()
 		get_parent().add_child(enemy)
-		enemy.position = Vector2(randf_range(-2, 2), randf_range(-2, 2))
+		enemy.position = position
 
 func take_damage(dmg):
 	health -= dmg

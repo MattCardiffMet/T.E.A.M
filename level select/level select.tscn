@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://bxuumh6x6no45"]
+
+[ext_resource type="Texture2D" uid="uid://c7g16nq58jqa0" path="res://character select/assets/merlin.png" id="1_q3wib"]
+[ext_resource type="Script" uid="uid://c7xgvi00x5jw4" path="res://level select/level_select.gd" id="1_shf2m"]
+
+[node name="LevelSelect" type="Control" unique_id=1758400204]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_shf2m")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1976935692]
+layout_mode = 0
+offset_left = -36.0
+offset_top = -19.0
+offset_right = 1175.0
+offset_bottom = 672.0
+color = Color(0, 0, 0, 1)
+
+[node name="CharaIcon" type="TextureRect" parent="." unique_id=680709826]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 118.0
+offset_top = 206.0
+offset_right = -800.0
+offset_bottom = -220.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_q3wib")
+expand_mode = 1
+
+[node name="CharaLabel" type="Label" parent="." unique_id=1360325406]
+layout_mode = 0
+offset_left = 166.0
+offset_top = 162.0
+offset_right = 303.0
+offset_bottom = 185.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "chara name"
+horizontal_alignment = 1
+
+[node name="LabelVContainer" type="VBoxContainer" parent="." unique_id=1849786045]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 527.0
+offset_top = 273.0
+offset_right = -173.0
+offset_bottom = -259.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StoryLabel" type="Label" parent="LabelVContainer" unique_id=729052905]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "Dungeon Mode"
+horizontal_alignment = 1
+
+[node name="TestLabel" type="Label" parent="LabelVContainer" unique_id=104819018]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+text = "Test Level"
+horizontal_alignment = 1
+
+[node name="ArrowVContainer" type="VBoxContainer" parent="." unique_id=570832533]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 423.0
+offset_top = 272.0
+offset_right = -277.0
+offset_bottom = -260.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StoryArrow" type="Label" parent="ArrowVContainer" unique_id=969437423]
+layout_mode = 2
+text = ">>"
+horizontal_alignment = 1
+
+[node name="TestArrow" type="Label" parent="ArrowVContainer" unique_id=2136806196]
+layout_mode = 2
+text = ">>"
+horizontal_alignment = 1

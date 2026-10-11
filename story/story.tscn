@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c2yoalgcc685x"]
+
+[ext_resource type="Texture2D" uid="uid://db24q5m81n1ns" path="res://ingame/assets/floor.jpg" id="1_gbne8"]
+[ext_resource type="PackedScene" uid="uid://cobl2i6eb3dxe" path="res://ingame/walls/wall.tscn" id="2_yob3j"]
+
+[node name="Story" type="Node2D" unique_id=1509491935]
+
+[node name="Floor" type="Sprite2D" parent="." unique_id=1181953657]
+position = Vector2(775, 491)
+texture = ExtResource("1_gbne8")
+
+[node name="WallParent" type="Node2D" parent="." unique_id=87806798]
+
+[node name="Wall" parent="WallParent" unique_id=1712423524 instance=ExtResource("2_yob3j")]
+position = Vector2(143, 58)

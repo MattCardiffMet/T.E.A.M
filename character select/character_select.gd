@@ -19,7 +19,7 @@ func _unhandled_input(event):
 	elif event.is_action_pressed("menu_accept"):
 		choose_character()
 		print("chara chosen")
-		get_tree().change_scene_to_file("res://ingame/game.tscn")
+		get_tree().change_scene_to_file("res://level select/level select.tscn")
 		print("select character ", select)
 	elif event.is_action_pressed("menu_quit"):
 		get_tree().change_scene_to_file("res://main menu/main_menu.tscn")

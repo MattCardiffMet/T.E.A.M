@@ -24,8 +24,10 @@ folder_colors={
 "res://character select/": "yellow",
 "res://global scripts/": "red",
 "res://ingame/": "green",
+"res://level select/": "orange",
 "res://main menu/": "blue",
-"res://outgame/": "purple"
+"res://outgame/": "purple",
+"res://story/": "pink"
 }
 
 [input]

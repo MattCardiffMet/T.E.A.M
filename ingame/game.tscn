@@ -1,14 +1,45 @@
 [gd_scene format=3 uid="uid://drvim2dee3p6k"]
 
 [ext_resource type="Script" uid="uid://cfwdc2encli5y" path="res://ingame/player.gd" id="1_7cgaw"]
+[ext_resource type="Texture2D" uid="uid://db24q5m81n1ns" path="res://ingame/assets/floor.jpg" id="1_kpj31"]
 [ext_resource type="Texture2D" uid="uid://bggc5uo7n2oi7" path="res://ingame/assets/Merlin.png" id="2_wmfl1"]
-[ext_resource type="Texture2D" uid="uid://csi18asgdsuwb" path="res://main menu/assets/gauntlet-logo.png" id="3_wmfl1"]
 [ext_resource type="PackedScene" uid="uid://yqixa7x8q81c" path="res://ingame/enemy/enemy.tscn" id="4_05a0k"]
 [ext_resource type="Script" uid="uid://wi266jdrl8vg" path="res://ingame/hud.gd" id="5_kpj31"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s3i1m"]
+size = Vector2(1355, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dkv5f"]
+size = Vector2(20, 791)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_05a0k"]
 
 [node name="Game" type="Node2D" unique_id=272129187]
+
+[node name="Floor" type="Sprite2D" parent="." unique_id=2008413987]
+texture = ExtResource("1_kpj31")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Floor" unique_id=1976082955]
+
+[node name="WallBottom" type="CollisionShape2D" parent="Floor/StaticBody2D" unique_id=2082754863]
+position = Vector2(6, 332)
+shape = SubResource("RectangleShape2D_s3i1m")
+debug_color = Color(0.96862745, 0, 1, 1)
+
+[node name="WallLeft" type="CollisionShape2D" parent="Floor/StaticBody2D" unique_id=1953618023]
+position = Vector2(-651, -8)
+shape = SubResource("RectangleShape2D_dkv5f")
+debug_color = Color(0, 0, 1, 1)
+
+[node name="WallTop" type="CollisionShape2D" parent="Floor/StaticBody2D" unique_id=1327280351]
+position = Vector2(24, -375)
+shape = SubResource("RectangleShape2D_s3i1m")
+debug_color = Color(0.96862745, 0, 1, 1)
+
+[node name="WallRight" type="CollisionShape2D" parent="Floor/StaticBody2D" unique_id=1082237912]
+position = Vector2(670, -10)
+shape = SubResource("RectangleShape2D_dkv5f")
+debug_color = Color(0, 0, 1, 1)
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1643436378]
 position = Vector2(81, 60)
@@ -66,10 +97,5 @@ layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 0, 1)
 text = "ScoreLabe;l"
 horizontal_alignment = 1
-
-[node name="temp logo" type="Sprite2D" parent="." unique_id=676722680]
-position = Vector2(492.00006, 188.5)
-scale = Vector2(0.54323, 0.4830097)
-texture = ExtResource("3_wmfl1")
 
 [node name="Enemy" parent="." unique_id=2097746384 instance=ExtResource("4_05a0k")]

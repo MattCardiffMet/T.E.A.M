@@ -3,6 +3,8 @@ extends Area2D
 @export var damage = 20
 @export var health = 115
 @export var points_given = 100
+@export var move_speed = 100
+@onready var player = $"../Player"
 
 func _ready() -> void:
 	body_entered.connect(_on_body_entered)
@@ -17,3 +19,7 @@ func take_damage(damage):
 	if health <= 0:
 		Global.score += points_given
 		queue_free()
+
+func _physics_process(delta: float) -> void:
+	var direction = (player.position - position).normalized()
+	position += direction * move_speed * delta

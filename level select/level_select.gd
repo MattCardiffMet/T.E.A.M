@@ -23,6 +23,8 @@ func _unhandled_key_input(event) -> void:
 	elif event.is_action_pressed("menu_up"):
 		on_story = true
 		update_arrows()
+	elif event.is_action_pressed("menu_quit"):
+		get_tree().change_scene_to_file("res://character select/character_select.tscn")
 	elif event.is_action_pressed("menu_accept"):
 		if on_story:
 			get_tree().change_scene_to_file("res://story/story.tscn")

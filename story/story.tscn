@@ -1,17 +1,63 @@
-[gd_scene format=3 uid="uid://c2yoalgcc685x"]
+[gd_scene format=4 uid="uid://c2yoalgcc685x"]
 
 [ext_resource type="Texture2D" uid="uid://db24q5m81n1ns" path="res://ingame/assets/floor.jpg" id="1_gbne8"]
 [ext_resource type="PackedScene" uid="uid://bag8s0yx25hrm" path="res://ingame/player.tscn" id="2_gbne8"]
-[ext_resource type="PackedScene" uid="uid://yqixa7x8q81c" path="res://ingame/enemy/enemy.tscn" id="3_yob3j"]
+[ext_resource type="PackedScene" uid="uid://dk4gpqyo42r7m" path="res://story/tilemap.tscn" id="3_yob3j"]
+[ext_resource type="PackedScene" uid="uid://yqixa7x8q81c" path="res://ingame/enemy/enemy.tscn" id="4_h0iiv"]
+[ext_resource type="PackedScene" uid="uid://b6hdt5bg02gar" path="res://ingame/key/key.tscn" id="5_kidyl"]
+[ext_resource type="PackedScene" uid="uid://u5pgiygqdmct" path="res://ingame/door/door.tscn" id="6_2n1kf"]
+[ext_resource type="PackedScene" uid="uid://y2mteu5gtnvk" path="res://ingame/spawner/spawner.tscn" id="7_xa0d8"]
+[ext_resource type="PackedScene" uid="uid://bbd33tw2tuu3d" path="res://ingame/score item/treasure.tscn" id="8_makq8"]
+[ext_resource type="PackedScene" uid="uid://123p32be8ufu" path="res://ingame/exit/exit.tscn" id="9_ftmra"]
 
 [node name="Story" type="Node2D" unique_id=1509491935]
 
 [node name="Floor" type="Sprite2D" parent="." unique_id=1181953657]
-position = Vector2(775, 491)
+position = Vector2(789, 491)
 texture = ExtResource("1_gbne8")
 
 [node name="Player" parent="." unique_id=1284846514 instance=ExtResource("2_gbne8")]
 position = Vector2(312, 178)
 
-[node name="Enemy" parent="." unique_id=1222579100 instance=ExtResource("3_yob3j")]
-position = Vector2(260, 55)
+[node name="Tilemap" parent="." unique_id=1246167241 instance=ExtResource("3_yob3j")]
+tile_map_data = PackedByteArray("AAAPAAcAAAAAAAAAAAAQAAcAAAAAAAAAAAARAAcAAAAAAAAAAAASAAcAAAAAAAAAAAATAAcAAAAAAAAAAAAUAAcAAAAAAAAAAAAVAAcAAAAAAAAAAAAWAAcAAAAAAAAAAAAXAAcAAAAAAAAAAAAYAAcAAAAAAAAAAAAZAAcAAAAAAAAAAAAaAAcAAAAAAAAAAAAbAAcAAAAAAAAAAAAcAAcAAAAAAAAAAAAPAAgAAAAAAAAAAAAPAAkAAAAAAAAAAAAPAAoAAAAAAAAAAAAPAAsAAAAAAAAAAAAPAAwAAAAAAAAAAAAPAA0AAAAAAAAAAAAQAA0AAAAAAAAAAAARAA0AAAAAAAAAAAASAA0AAAAAAAAAAAATAA0AAAAAAAAAAAAUAA0AAAAAAAAAAAAVAA0AAAAAAAAAAAAWAA0AAAAAAAAAAAAXAA0AAAAAAAAAAAAYAA0AAAAAAAAAAAAZAA0AAAAAAAAAAAAaAA0AAAAAAAAAAAAbAA0AAAAAAAAAAAAcAA0AAAAAAAAAAAAdAAcAAAAAAAAAAAAeAAcAAAAAAAAAAAAfAAcAAAAAAAAAAAAgAAcAAAAAAAAAAAAhAAcAAAAAAAAAAAAiAAcAAAAAAAAAAAAjAAcAAAAAAAAAAAAkAAcAAAAAAAAAAAAkAAgAAAAAAAAAAAAkAAkAAAAAAAAAAAAkAAoAAAAAAAAAAAAkAAsAAAAAAAAAAAAkAAwAAAAAAAAAAAAkAA0AAAAAAAAAAAAkAA4AAAAAAAAAAAAkAA8AAAAAAAAAAAAkABAAAAAAAAAAAAAkABEAAAAAAAAAAAAkABIAAAAAAAAAAAAkABMAAAAAAAAAAAAkABQAAAAAAAAAAAAkABUAAAAAAAAAAAAjABUAAAAAAAAAAAAiABUAAAAAAAAAAAAhABUAAAAAAAAAAAAgABUAAAAAAAAAAAAfABUAAAAAAAAAAAAeABUAAAAAAAAAAAAdABUAAAAAAAAAAAAcABUAAAAAAAAAAAAbABUAAAAAAAAAAAAaABUAAAAAAAAAAAAZABUAAAAAAAAAAAAYABUAAAAAAAAAAAAXABUAAAAAAAAAAAAWABUAAAAAAAAAAAATABUAAAAAAAAAAAASABUAAAAAAAAAAAARABUAAAAAAAAAAAAQABUAAAAAAAAAAAAPABUAAAAAAAAAAAAPABQAAAAAAAAAAAAPABMAAAAAAAAAAAAPABIAAAAAAAAAAAAPABEAAAAAAAAAAAAPABAAAAAAAAAAAAAPAA8AAAAAAAAAAAAPAA4AAAAAAAAAAAAPABYAAAAAAAAAAAAPABcAAAAAAAAAAAAPABgAAAAAAAAAAAAPABkAAAAAAAAAAAAPABoAAAAAAAAAAAAPABsAAAAAAAAAAAAPABwAAAAAAAAAAAAPAB0AAAAAAAAAAAAPAB4AAAAAAAAAAAAQAB4AAAAAAAAAAAARAB4AAAAAAAAAAAASAB4AAAAAAAAAAAATAB4AAAAAAAAAAAAUAB4AAAAAAAAAAAAVAB4AAAAAAAAAAAAWAB4AAAAAAAAAAAAXAB4AAAAAAAAAAAAYAB4AAAAAAAAAAAAZAB4AAAAAAAAAAAAaAB4AAAAAAAAAAAAbAB4AAAAAAAAAAAAcAB4AAAAAAAAAAAAhAB4AAAAAAAAAAAAiAB4AAAAAAAAAAAAjAB4AAAAAAAAAAAAkAB4AAAAAAAAAAAAkABYAAAAAAAAAAAAkABcAAAAAAAAAAAAkABgAAAAAAAAAAAAkABkAAAAAAAAAAAAkABoAAAAAAAAAAAAkABsAAAAAAAAAAAAkABwAAAAAAAAAAAAkAB0AAAAAAAAAAAAPAB8AAAAAAAAAAAAPACAAAAAAAAAAAAAPACEAAAAAAAAAAAAPACIAAAAAAAAAAAAPACMAAAAAAAAAAAAPACQAAAAAAAAAAAAPACUAAAAAAAAAAAAQACUAAAAAAAAAAAARACUAAAAAAAAAAAASACUAAAAAAAAAAAATACUAAAAAAAAAAAAUACUAAAAAAAAAAAAVACUAAAAAAAAAAAAWACUAAAAAAAAAAAAXACUAAAAAAAAAAAAYACUAAAAAAAAAAAAZACUAAAAAAAAAAAAaACUAAAAAAAAAAAAbACUAAAAAAAAAAAAcACUAAAAAAAAAAAAdACUAAAAAAAAAAAAeACUAAAAAAAAAAAAfACUAAAAAAAAAAAAgACUAAAAAAAAAAAAhACUAAAAAAAAAAAAiACUAAAAAAAAAAAAjACUAAAAAAAAAAAAkACUAAAAAAAAAAAAkACQAAAAAAAAAAAAkACMAAAAAAAAAAAAkACIAAAAAAAAAAAAkACEAAAAAAAAAAAAkACAAAAAAAAAAAAAkAB8AAAAAAAAAAAA=")
+
+[node name="Enemy" parent="." unique_id=1222579100 instance=ExtResource("4_h0iiv")]
+position = Vector2(274, 240)
+
+[node name="Enemy2" parent="." unique_id=1183746640 instance=ExtResource("4_h0iiv")]
+position = Vector2(273, 284)
+
+[node name="Enemy3" parent="." unique_id=147502351 instance=ExtResource("4_h0iiv")]
+position = Vector2(518, 147)
+
+[node name="Enemy4" parent="." unique_id=357113198 instance=ExtResource("4_h0iiv")]
+position = Vector2(498, 528)
+
+[node name="Key" parent="." unique_id=2070367725 instance=ExtResource("5_kidyl")]
+position = Vector2(340, 282)
+
+[node name="Door" parent="." unique_id=1146499188 instance=ExtResource("6_2n1kf")]
+position = Vector2(527, 487)
+rotation = 1.5707964
+
+[node name="Spawner" parent="." unique_id=1219218771 instance=ExtResource("7_xa0d8")]
+position = Vector2(543, 426)
+
+[node name="Treasure" parent="." unique_id=2057937811 instance=ExtResource("8_makq8")]
+position = Vector2(274, 146)
+
+[node name="Treasure2" parent="." unique_id=851308605 instance=ExtResource("8_makq8")]
+position = Vector2(557, 456)
+
+[node name="Treasure3" parent="." unique_id=1288132144 instance=ExtResource("8_makq8")]
+position = Vector2(558, 272)
+
+[node name="Treasure4" parent="." unique_id=1732966789 instance=ExtResource("8_makq8")]
+position = Vector2(275, 386)
+
+[node name="Treasure5" parent="." unique_id=190644784 instance=ExtResource("8_makq8")]
+position = Vector2(382, 514)
+
+[node name="Exit" parent="." unique_id=1042737036 instance=ExtResource("9_ftmra")]
+position = Vector2(280, 543)

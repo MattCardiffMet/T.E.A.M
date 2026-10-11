@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dk4gpqyo42r7m"]
+
+[ext_resource type="Texture2D" uid="uid://couvc0ubby07l" path="res://story/assets/wall.png" id="1_le5de"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fd58p"]
+resource_name = "wall"
+texture = ExtResource("1_le5de")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_rlwag"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_fd58p")
+
+[node name="Tilemap" type="TileMapLayer" unique_id=1246167241]
+texture_filter = 1
+tile_set = SubResource("TileSet_rlwag")

@@ -1,10 +1,27 @@
 [gd_scene format=3 uid="uid://123p32be8ufu"]
 
+[ext_resource type="Script" uid="uid://bcrijie4m10do" path="res://ingame/exit/exit.gd" id="1_bfpol"]
+[ext_resource type="Texture2D" uid="uid://bmwahtbd4thnk" path="res://ingame/exit/assets/exit.png" id="2_0fvnq"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qil6f"]
+size = Vector2(27, 26)
 
 [node name="Exit" type="Area2D" unique_id=1042737036]
+script = ExtResource("1_bfpol")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1475364621]
+position = Vector2(3.5, 3)
+scale = Vector2(1.4375, 1.375)
+texture = ExtResource("2_0fvnq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=425085202]
+position = Vector2(3.5, 2.5)
 shape = SubResource("RectangleShape2D_qil6f")
+debug_color = Color(0.978924, 0, 0.3960697, 0.41960785)
+
+[node name="Trigger" type="Area2D" parent="." unique_id=2042960545]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger" unique_id=163137621]
+position = Vector2(3.5, 2)
+shape = SubResource("RectangleShape2D_qil6f")
+debug_color = Color(0.978924, 0, 0.3960697, 0.41960785)

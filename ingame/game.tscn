@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://b6hdt5bg02gar" path="res://ingame/key/key.tscn" id="7_dkv5f"]
 [ext_resource type="PackedScene" uid="uid://u5pgiygqdmct" path="res://ingame/door/door.tscn" id="8_p2lj4"]
 [ext_resource type="PackedScene" uid="uid://cobl2i6eb3dxe" path="res://ingame/walls/wall.tscn" id="9_e6xlt"]
+[ext_resource type="PackedScene" uid="uid://123p32be8ufu" path="res://ingame/exit/exit.tscn" id="10_2pcsk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s3i1m"]
 size = Vector2(1355, 20)
@@ -129,3 +130,6 @@ rotation = 3.1415927
 [node name="Wall3" parent="." unique_id=2068211231 instance=ExtResource("9_e6xlt")]
 position = Vector2(378, -5)
 rotation = 1.5707964
+
+[node name="Exit" parent="." unique_id=1042737036 instance=ExtResource("10_2pcsk")]
+position = Vector2(348, 32)

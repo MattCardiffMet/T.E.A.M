@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://y2mteu5gtnvk"]
+
+[ext_resource type="Script" uid="uid://4sucyc0qw77t" path="res://ingame/spawner/spawner.gd" id="1_e5hj0"]
+[ext_resource type="Texture2D" uid="uid://cetd700ggxasi" path="res://ingame/spawner/assets/spawner.png" id="1_q7bac"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e5hj0"]
+
+[node name="Spawner" type="Area2D" unique_id=1219218771]
+script = ExtResource("1_e5hj0")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1514665737]
+texture_filter = 1
+position = Vector2(-1.25, -1.75)
+scale = Vector2(0.88095236, 0.8333333)
+texture = ExtResource("1_q7bac")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=272295404]
+position = Vector2(-1, -2)
+shape = SubResource("RectangleShape2D_e5hj0")
+
+[node name="Timer" type="Timer" parent="." unique_id=1640194425]
+wait_time = 3.0
+autostart = true

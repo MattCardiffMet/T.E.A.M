@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bggc5uo7n2oi7" path="res://ingame/assets/Merlin.png" id="2_wmfl1"]
 [ext_resource type="PackedScene" uid="uid://yqixa7x8q81c" path="res://ingame/enemy/enemy.tscn" id="4_05a0k"]
 [ext_resource type="Script" uid="uid://wi266jdrl8vg" path="res://ingame/hud.gd" id="5_kpj31"]
+[ext_resource type="PackedScene" uid="uid://y2mteu5gtnvk" path="res://ingame/spawner/spawner.tscn" id="6_s3i1m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s3i1m"]
 size = Vector2(1355, 20)
@@ -99,3 +100,6 @@ text = "ScoreLabe;l"
 horizontal_alignment = 1
 
 [node name="Enemy" parent="." unique_id=2097746384 instance=ExtResource("4_05a0k")]
+
+[node name="Spawner" parent="." unique_id=1219218771 instance=ExtResource("6_s3i1m")]
+position = Vector2(150, -8)

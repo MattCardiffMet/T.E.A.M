@@ -4,9 +4,12 @@ extends Area2D
 @export var health = 115
 @export var points_given = 100
 @export var move_speed = 100
-@onready var player = $"../Player"
+
+@onready var player = get_tree().current_scene.get_node("Player")
+var cooldown = 0.0
 
 func _ready() -> void:
+	add_to_group("enemies")
 	body_entered.connect(_on_body_entered)
 	
 func _on_body_entered(body):

@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://drvim2dee3p6k"]
 
+[ext_resource type="Script" uid="uid://crnylwqb2dn2l" path="res://ingame/game.gd" id="1_2pcsk"]
 [ext_resource type="Texture2D" uid="uid://db24q5m81n1ns" path="res://ingame/assets/floor.jpg" id="1_kpj31"]
 [ext_resource type="PackedScene" uid="uid://bag8s0yx25hrm" path="res://ingame/player.tscn" id="2_p2lj4"]
 [ext_resource type="PackedScene" uid="uid://yqixa7x8q81c" path="res://ingame/enemy/enemy.tscn" id="4_05a0k"]
@@ -17,6 +18,7 @@ size = Vector2(1355, 20)
 size = Vector2(20, 791)
 
 [node name="Game" type="Node2D" unique_id=272129187]
+script = ExtResource("1_2pcsk")
 
 [node name="Floor" type="Sprite2D" parent="." unique_id=2008413987]
 texture = ExtResource("1_kpj31")

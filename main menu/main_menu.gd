@@ -10,6 +10,7 @@ func _ready() -> void:
 	Global.score = 0
 	Global.keys = 0
 	Global.chara = ""
+	Global.current_level = -1
 
 func _unhandled_input(event):
 	# menu arrow handling
